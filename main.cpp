@@ -67,7 +67,35 @@ int main(){
 		}//Fin del Case 2
         
 		case 'c':{//Iteraciones
-		cout << "Usted ha seleccionado la opción 3";
+		cout << "Usted ha seleccionado la opción 3" <<endl;
+		double n2 = 0;
+    int t = 15;
+    double mitad = 0;
+    double inicio = 0;
+    int var2 = 0;
+    double end = 0;
+    
+    cout << "Ingrese el valor de n: ";
+    cin >> n2;
+    cout << endl << endl;
+    end = n2;   
+    for(int i = 0; i < t; i++){
+        mitad = (end + inicio) / (double)2;
+        double var = mitad * mitad;
+        if (var < n2){
+            inicio = mitad;
+        }else if(var > n2){
+            end = mitad;
+        }
+        else if(var == n2){   
+            cout << "El resultado es: " << mitad << endl << endl;
+            var2 = 1; 
+            break;
+        }
+    }
+    if(var2 == 0){
+     cout << "El resultado es: " << mitad << endl << endl;
+    }
 			break;
 		}//Fin del Case 3
         default: cout << "Usted ha ingresado una opción incorrecta";
