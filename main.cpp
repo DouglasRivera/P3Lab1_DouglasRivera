@@ -14,9 +14,13 @@ int main(){
 		case 'a':{//Matriz 0y1
 		cout << "Usted ha seleccionado la opción 1" <<endl;
 		int n = 0;
-
+  
     cout << "Ingrese el tamaño del tablero(matriz): ";
     cin >> n;
+    while (n<=0) {
+					cout << "Ingrese un numero que no sea negativo o 0 " << endl;
+					cin >> n;
+				}//validacion para que sea diferente a negativo o 0    
     cout << endl << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -44,9 +48,14 @@ int main(){
 	    int n1 = 0;
     	int resultado = 0;
     	int mult = 0;
-    	int parentesis = 0;
-    		cout << "Ingrese el numero para calcular la sumatoria: ";
-    				cin >>  n1;
+    	int parentesis = 0;	
+    		
+			cout << "Ingrese el numero para calcular la sumatoria: "<<endl;
+			cin >>  n1;
+			while (n1<=0) {
+					cout << "Ingrese un numero que no sea negativo o 0 " << endl;
+					cin >> n1;
+				}//validacion para que sea diferente a negativo o 0         	
     				cout << endl << endl;
     				for(int i = 1; i <= n1; i++){
         			mult = 2 * i;
